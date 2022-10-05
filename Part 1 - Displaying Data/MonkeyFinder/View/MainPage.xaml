@@ -4,7 +4,7 @@
              xmlns:model="clr-namespace:MonkeyFinder.Model"
              x:Class="MonkeyFinder.View.MainPage">
 
-    <CollectionView BackgroundColor="BurlyWood" >
+    <CollectionView BackgroundColor="OrangeRed" >
         <CollectionView.ItemsSource>
             <x:Array Type="{x:Type model:Monkey}">
                 <model:Monkey
@@ -23,14 +23,14 @@
         </CollectionView.ItemsSource>
         <CollectionView.ItemTemplate>
             <DataTemplate x:DataType="model:Monkey">
-                <HorizontalStackLayout Padding="05" Spacing="05">
+                <HorizontalStackLayout Padding="05" Spacing="05" BackgroundColor="OrangeRed">
                     <Image Source="{Binding Image}"
                            HeightRequest="100"
                            WidthRequest="100"
                            Aspect="AspectFill"/>
-                    <VerticalStackLayout Padding="10" Spacing="10" Background="Brown">
-                        <Label Text="{Binding Name}" TextColor="Green" FontSize="24" Padding="05"/>
-                        <Label Text="{Binding Location}" TextColor="Ivory" FontSize="20"/>
+                    <VerticalStackLayout Padding="10" Spacing="10" >
+                        <Label Text="{Binding Name}" TextColor="AliceBlue" FontSize="Large" FontAttributes="None" Padding="05" HorizontalTextAlignment="Start"/>
+                        <Label Text="{Binding Location}" TextColor="Green" FontSize="Medium" FontAttributes="Italic" HorizontalTextAlignment="Start"/>
                     </VerticalStackLayout>
                 </HorizontalStackLayout> 
             </DataTemplate>
