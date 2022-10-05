@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:MonkeyFinder.Model"
              x:Class="MonkeyFinder.View.MainPage">
 
-    
+    <CollectionView BackgroundColor="BurlyWood" >
+        <CollectionView.ItemsSource>
+            <x:Array Type="{x:Type model:Monkey}">
+                <model:Monkey
+                    Name="Babbom"
+                    Image="https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/baboon.jpg"
+                    Location="Africa and Asia"/>
+                <model:Monkey 
+                    Name="Capuchin Monkey"
+                    Image= "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/capuchin.jpg"
+                    Location="Central and South America"/>
+                <model:Monkey 
+                    Name="Red-shanked douc"
+                    Image="https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/douc.jpg"
+                    Location="Central and East Africa"/>
+            </x:Array>
+        </CollectionView.ItemsSource>
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="model:Monkey">
+                <HorizontalStackLayout Padding="05" Spacing="05">
+                    <Image Source="{Binding Image}"
+                           HeightRequest="100"
+                           WidthRequest="100"
+                           Aspect="AspectFill"/>
+                    <VerticalStackLayout Padding="10" Spacing="10" Background="Brown">
+                        <Label Text="{Binding Name}" TextColor="Green" FontSize="24" Padding="05"/>
+                        <Label Text="{Binding Location}" TextColor="Ivory" FontSize="20"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout> 
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
 </ContentPage>
