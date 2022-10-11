@@ -29,8 +29,8 @@
                            WidthRequest="100"
                            Aspect="AspectFill"/>
                     <VerticalStackLayout Padding="10" Spacing="10" >
-                        <Label Text="{Binding Name}" TextColor="Chartreuse" FontSize="Large" FontAttributes="None" Padding="05" HorizontalTextAlignment="Start"/>
-                        <Label Text="{Binding Location}" TextColor="PaleGreen" FontSize="Medium" FontAttributes="Italic" HorizontalTextAlignment="Start"/>
+                        <Label Text="{Binding Name}"   TextColor="Crimson"  FontSize="Large" FontAttributes="None" Padding="05" HorizontalTextAlignment="Start"/>
+                        <Label Text="{Binding Location}" TextColor="Chartreuse" FontSize="Medium" FontAttributes="Italic" HorizontalTextAlignment="Start"/>
                     </VerticalStackLayout>
                 </HorizontalStackLayout> 
             </DataTemplate>
